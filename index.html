@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>URL Shortener</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <style>
+        .material-symbols-outlined {
+          font-variation-settings:
+          'FILL' 0,
+          'wght' 400,
+          'GRAD' 0,
+          'opsz' 24
+        }
+        </style>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              }
+            }
+          }
+        }
+      </script>
+    <script defer src="./index.js"></script>
+  </head>
+  <body class="w-[60%] md:w-[30%] mx-auto flex flex-col justify-center items-center">
+    <div class="mx-auto flex flex-col justify-center items-center  gap-4 p-2 border border-gray-800 w-full rounded-md text-gray-600 text-left">
+        <span class="text-black material-symbols-outlined text-5xl">
+            link
+            </span>
+      <label for="url-to-shorten">Enter URL To Shorten: </label>
+      <input type="text" name="url-to-shorten" id="url-to-shorten" class="border border-gray-800 p-2 h-8 w-full rounded-md" />
+      <div id="buttons" class="w-full flex justify-center items-center gap-2">
+        <button id="reload-btn" class=" border border-gray-800 rounded-md w-[50%]">Reload</button>
+        <button id="shorten-btn" class="border border-gray-800 rounded-md w-[50%]"">Shorten</button>
+      </div>
+      <label for="view-text-field">Shortened URL:</label>
+      <textarea name="view-text-field" id="view-text-field" rows="3" readonly class="border border-gray-800 p-2 h-16 w-full rounded-md"></textarea>
+    </div>
+  </body>
+</html>
